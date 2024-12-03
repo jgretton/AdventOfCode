@@ -1,4 +1,4 @@
-list = [
+const list = [
 	58692, 56129, 45806, 95015, 61519, 31093, 77848, 16487, 98705, 66749, 40109,
 	81197, 26355, 75702, 68715, 92381, 56304, 23460, 37264, 12036, 43236, 27331,
 	43577, 28168, 77477, 20638, 53092, 44012, 37180, 48396, 20616, 32705, 97334,
@@ -183,25 +183,4 @@ list = [
 	35587, 30874, 14008, 15369, 52468, 25998, 79528, 37079, 53944,
 ];
 
-let list_1 = [];
-let list_2 = [];
-let acummulation = 0;
-
-//Map through and split initial array into 2.
-list.map((item, index) => {
-	if (index % 2) {
-		list_1.push(item);
-	} else list_2.push(item);
-});
-
-//Sort numerically
-list_1.sort();
-list_2.sort();
-
-//go through each index, minus values to find the gap, math absolute to make sure its positive.
-// add to accumulation to get final value.
-for (let index = 0; index < list_1.length; index++) {
-	acummulation = acummulation + Math.abs(list_1[index] - list_2[index]);
-}
-
-console.log(acummulation);
+export default list;
